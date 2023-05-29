@@ -60,7 +60,7 @@ function my_keydown(e) {
 
 function up() {
 	if (greencar_y >= 0) {
-		greencar_y = greencar_y + 10;
+		greencar_y = greencar_y - 10;
 		console.log("When up arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
 		uploadBackground();
 		uploadgreencar();
@@ -70,7 +70,7 @@ function up() {
 
 function down() {
 	if (greencar_y <= 400) {
-		greencar_y -= 10;
+		greencar_y += 10;
 		console.log("When up arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
 		uploadBackground();
 		uploadgreencar();
@@ -79,8 +79,8 @@ function down() {
 }
 
 function left() {
-	if (rover_x <= 0) {
-		rover_x -= 10;
+	if (greencar_x >= 0) {
+		greencar_x -= 10;
 		console.log("When up arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
 		uploadBackground();
 		uploadgreencar();
@@ -88,8 +88,8 @@ function left() {
 }
 
 function right() {
-	if (rover_x <= 800) {
-		rover_x += 10;
+	if (greencar_x <= 800) {
+		greencar_x += 10;
 		console.log("When up arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
 		uploadBackground()
 		uploadgreencar();
